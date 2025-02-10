@@ -45,9 +45,6 @@ export default function DataTable() {
                                     Employee Name
                                 </th>
                                 <th className="py-3 px-5 text-left border border-gray-300">
-                                    Granted Shares
-                                </th>
-                                <th className="py-3 px-5 text-left border border-gray-300">
                                     Vested Shares
                                 </th>
                             </tr>
@@ -70,13 +67,9 @@ export default function DataTable() {
                                             <td className="py-3 px-5">
                                                 {employee.employeeName}
                                             </td>
-                                            <td className="py-3 px-5 text-green-600 font-semibold">
-                                                {employee.grantedShares
-                                                    .toLocaleString()} $
-                                            </td>
                                             <td className="py-3 px-5 text-blue-500 font-semibold">
                                                 {employee.vestedShares
-                                                    .toLocaleString()} $
+                                                    .toLocaleString()}
                                             </td>
                                         </tr>
                                     ))
