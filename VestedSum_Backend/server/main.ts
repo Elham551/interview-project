@@ -1,9 +1,18 @@
-import { Hono } from 'hono'
+import { Hono } from "https://deno.land/x/hono@v4.3.11/mod.ts";
+import route from "./routes/routes.ts";
 
-const app = new Hono()
+const app = new Hono();
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
+// Middleware to handle errors
+app.use(async (c, next) => {
+  try {
+    await next();
+  } catch (err) {
+    c.status(500);
+    c.json({ error: "Internal server error" });
+  }
+});
 
-Deno.serve(app.fetch)
+app.route("/", route);
+
+Deno.serve(app.fetch);
