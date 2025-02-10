@@ -30,7 +30,10 @@ project:
 1. **Backend Validation for Unique Post IDs:** Implement a robust validation
    method in the backend to ensure that duplicate post IDs are not allowed,
    while still supporting unique names for each post entry.
-2. **Comprehensive Testing:**
+2. **Reading Base URL from .env:** Improve configuration management by reading
+   the base URL from an `.env` file to simplify environment-specific
+   configurations.
+3. **Comprehensive Testing:**
    - **Backend:** Write additional unit and integration tests to cover all
      critical functionalities and edge cases.
    - **Frontend:** Increase test coverage for components and interactions,

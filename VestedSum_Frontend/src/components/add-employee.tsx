@@ -37,7 +37,7 @@ export default function AddEmployee(
                 grantedShares: "",
                 vestedShares: "",
             });
-            onUserAdded(); // برای به‌روزرسانی لیست جدول
+            onUserAdded();
         } catch (error) {
             setError("Problem adding user.");
         } finally {
